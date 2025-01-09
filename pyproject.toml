@@ -40,10 +40,10 @@ model.name = "microsoft/phi-4"
 model.quantization = 4
 model.gradient-checkpointing = true
 model.lora.peft-lora-r = 8
-model.lora.peft-lora-alpha = 64
+model.lora.peft-lora-alpha = 16
 train.save-every-round = 5
 train.learning-rate-max = 5e-5
-train.learning-rate-min = 1e-6
+train.learning-rate-min = 5e-6
 train.seq-length = 512
 train.training-arguments.output-dir = ""
 train.training-arguments.learning-rate = ""
@@ -59,6 +59,7 @@ train.training-arguments.gradient-checkpointing = true
 train.training-arguments.bf16 = true
 train.training-arguments.tf32 = true
 train.training-arguments.lr-scheduler-type = "constant"
+train.training-arguments.optim = "paged_adamw_8bit"
 strategy.fraction-fit = 0.1
 strategy.fraction-evaluate = 0.0
 num-server-rounds = 100
@@ -71,5 +72,5 @@ default = "local-simulation"
 
 [tool.flwr.federations.local-simulation]
 options.num-supernodes = 20
-options.backend.client-resources.num-cpus = 6
+options.backend.client-resources.num-cpus = 2
 options.backend.client-resources.num-gpus = 1.0

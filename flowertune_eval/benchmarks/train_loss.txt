@@ -1,0 +1,210 @@
+INFO :      aggregate_fit: received 2 results and 0 failures
+INFO :      Communication budget: used 45804.69 MB (+229.02 MB this round) / 200,000 MB
+INFO :      fit progress: (100, 0.0, {}, 34577.40820723798)
+INFO :      configure_evaluate: no clients selected, skipping evaluation
+INFO :
+INFO :      [SUMMARY]
+INFO :      Run finished 100 round(s) in 34577.41s
+INFO :          History (loss, centralized):
+INFO :                  round 0: 0.0
+INFO :                  round 1: 0.0
+INFO :                  round 2: 0.0
+INFO :                  round 3: 0.0
+INFO :                  round 4: 0.0
+INFO :                  round 5: 0.0
+INFO :                  round 6: 0.0
+INFO :                  round 7: 0.0
+INFO :                  round 8: 0.0
+INFO :                  round 9: 0.0
+INFO :                  round 10: 0.0
+INFO :                  round 11: 0.0
+INFO :                  round 12: 0.0
+INFO :                  round 13: 0.0
+INFO :                  round 14: 0.0
+INFO :                  round 15: 0.0
+INFO :                  round 16: 0.0
+INFO :                  round 17: 0.0
+INFO :                  round 18: 0.0
+INFO :                  round 19: 0.0
+INFO :                  round 20: 0.0
+INFO :                  round 21: 0.0
+INFO :                  round 22: 0.0
+INFO :                  round 23: 0.0
+INFO :                  round 24: 0.0
+INFO :                  round 25: 0.0
+INFO :                  round 26: 0.0
+INFO :                  round 27: 0.0
+INFO :                  round 28: 0.0
+INFO :                  round 29: 0.0
+INFO :                  round 30: 0.0
+INFO :                  round 31: 0.0
+INFO :                  round 32: 0.0
+INFO :                  round 33: 0.0
+INFO :                  round 34: 0.0
+INFO :                  round 35: 0.0
+INFO :                  round 36: 0.0
+INFO :                  round 37: 0.0
+INFO :                  round 38: 0.0
+INFO :                  round 39: 0.0
+INFO :                  round 40: 0.0
+INFO :                  round 41: 0.0
+INFO :                  round 42: 0.0
+INFO :                  round 43: 0.0
+INFO :                  round 44: 0.0
+INFO :                  round 45: 0.0
+INFO :                  round 46: 0.0
+INFO :                  round 47: 0.0
+INFO :                  round 48: 0.0
+INFO :                  round 49: 0.0
+INFO :                  round 50: 0.0
+INFO :                  round 51: 0.0
+INFO :                  round 52: 0.0
+INFO :                  round 53: 0.0
+INFO :                  round 54: 0.0
+INFO :                  round 55: 0.0
+INFO :                  round 56: 0.0
+INFO :                  round 57: 0.0
+INFO :                  round 58: 0.0
+INFO :                  round 59: 0.0
+INFO :                  round 60: 0.0
+INFO :                  round 61: 0.0
+INFO :                  round 62: 0.0
+INFO :                  round 63: 0.0
+INFO :                  round 64: 0.0
+INFO :                  round 65: 0.0
+INFO :                  round 66: 0.0
+INFO :                  round 67: 0.0
+INFO :                  round 68: 0.0
+INFO :                  round 69: 0.0
+INFO :                  round 70: 0.0
+INFO :                  round 71: 0.0
+INFO :                  round 72: 0.0
+INFO :                  round 73: 0.0
+INFO :                  round 74: 0.0
+INFO :                  round 75: 0.0
+INFO :                  round 76: 0.0
+INFO :                  round 77: 0.0
+INFO :                  round 78: 0.0
+INFO :                  round 79: 0.0
+INFO :                  round 80: 0.0
+INFO :                  round 81: 0.0
+INFO :                  round 82: 0.0
+INFO :                  round 83: 0.0
+INFO :                  round 84: 0.0
+INFO :                  round 85: 0.0
+INFO :                  round 86: 0.0
+INFO :                  round 87: 0.0
+INFO :                  round 88: 0.0
+INFO :                  round 89: 0.0
+INFO :                  round 90: 0.0
+INFO :                  round 91: 0.0
+INFO :                  round 92: 0.0
+INFO :                  round 93: 0.0
+INFO :                  round 94: 0.0
+INFO :                  round 95: 0.0
+INFO :                  round 96: 0.0
+INFO :                  round 97: 0.0
+INFO :                  round 98: 0.0
+INFO :                  round 99: 0.0
+INFO :                  round 100: 0.0
+INFO :          History (metrics, distributed, fit):
+INFO :          {'train_loss': [(1, 0.9660533607006073),
+INFO :                          (2, 0.9824129313230514),
+INFO :                          (3, 0.9416995018720626),
+INFO :                          (4, 0.9425579339265824),
+INFO :                          (5, 0.9258016496896744),
+INFO :                          (6, 0.9057753950357437),
+INFO :                          (7, 0.9597871005535126),
+INFO :                          (8, 0.9067131894158758),
+INFO :                          (9, 0.9476566672325134),
+INFO :                          (10, 0.8665326168218086),
+INFO :                          (11, 0.8403354225697781),
+INFO :                          (12, 0.9249945908784867),
+INFO :                          (13, 0.902104467693326),
+INFO :                          (14, 0.9185483038425446),
+INFO :                          (15, 0.8989618062973023),
+INFO :                          (16, 0.9097533106803894),
+INFO :                          (17, 0.9319397866725921),
+INFO :                          (18, 0.8819927394390106),
+INFO :                          (19, 0.8868036419153214),
+INFO :                          (20, 0.9113203316926957),
+INFO :                          (21, 0.8624357014894486),
+INFO :                          (22, 0.9450760715925975),
+INFO :                          (23, 0.9041586017028755),
+INFO :                          (24, 0.8598819457001696),
+INFO :                          (25, 0.8691090315580368),
+INFO :                          (26, 0.8626455413208768),
+INFO :                          (27, 0.8355364233255387),
+INFO :                          (28, 0.856423482298851),
+INFO :                          (29, 0.8576272159814835),
+INFO :                          (30, 0.8178116952586785),
+INFO :                          (31, 0.7604618728160858),
+INFO :                          (32, 0.840094105899334),
+INFO :                          (33, 0.8418208733201027),
+INFO :                          (34, 0.7237009473145009),
+INFO :                          (35, 0.858362227678299),
+INFO :                          (36, 0.7556725144386292),
+INFO :                          (37, 0.8298235446214676),
+INFO :                          (38, 0.7859137021005154),
+INFO :                          (39, 0.8703934222459793),
+INFO :                          (40, 0.6807905055582524),
+INFO :                          (41, 0.8159291043877601),
+INFO :                          (42, 0.7950698629021644),
+INFO :                          (43, 0.7029050916433335),
+INFO :                          (44, 0.8191471055150032),
+INFO :                          (45, 0.7756673559546471),
+INFO :                          (46, 0.674278524518013),
+INFO :                          (47, 0.6357368372380734),
+INFO :                          (48, 0.7987640164792538),
+INFO :                          (49, 0.6002730265259743),
+INFO :                          (50, 0.7240337237715722),
+INFO :                          (51, 0.7626336894929409),
+INFO :                          (52, 0.6612403482691505),
+INFO :                          (53, 0.7501068584620952),
+INFO :                          (54, 0.7171785548329354),
+INFO :                          (55, 0.5408030177466572),
+INFO :                          (56, 0.6312025936320425),
+INFO :                          (57, 0.9175831347703933),
+INFO :                          (58, 0.6448634129017592),
+INFO :                          (59, 0.573609521985054),
+INFO :                          (60, 0.5393542882055045),
+INFO :                          (61, 0.6680549775727825),
+INFO :                          (62, 0.5287321988493204),
+INFO :                          (63, 0.7624194659292698),
+INFO :                          (64, 0.4904420554637909),
+INFO :                          (65, 0.5145355554297566),
+INFO :                          (66, 0.6283921270631254),
+INFO :                          (67, 0.7006840479560197),
+INFO :                          (68, 0.5570282367677487),
+INFO :                          (69, 0.8097769498825074),
+INFO :                          (70, 0.6632811307907105),
+INFO :                          (71, 0.43107391900848596),
+INFO :                          (72, 0.5870464032632299),
+INFO :                          (73, 0.5030630050692707),
+INFO :                          (74, 0.7108947615644332),
+INFO :                          (75, 0.7605387046933174),
+INFO :                          (76, 0.724279735982418),
+INFO :                          (77, 0.49958730801008644),
+INFO :                          (78, 0.5329381671797364),
+INFO :                          (79, 0.6010786205530166),
+INFO :                          (80, 0.618182090283804),
+INFO :                          (81, 0.6019077836303041),
+INFO :                          (82, 0.5654074475867674),
+INFO :                          (83, 0.6032497121952474),
+INFO :                          (84, 0.41077962189447137),
+INFO :                          (85, 0.6214233100414276),
+INFO :                          (86, 0.4662868613144383),
+INFO :                          (87, 0.45323694013641214),
+INFO :                          (88, 0.5499593772925436),
+INFO :                          (89, 0.577463690796867),
+INFO :                          (90, 0.571382056735456),
+INFO :                          (91, 0.4911923006409779),
+INFO :                          (92, 0.6339771248720382),
+INFO :                          (93, 0.4995685739221381),
+INFO :                          (94, 0.39632826306624336),
+INFO :                          (95, 0.5027169274981134),
+INFO :                          (96, 0.6232121989363805),
+INFO :                          (97, 0.6779071985892833),
+INFO :                          (98, 0.7475187160074711),
+INFO :                          (99, 0.47194489596613576),
+INFO :                          (100, 0.6082283249124885)]}

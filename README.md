@@ -10,7 +10,7 @@ which allows users to perform the training on a single GPU.
 
 The fine-tuning results have been submitted as a PEFT adapter and can be accessed here:
 
-[FlowerTune-Falcon3-Mamba-7B-Instruct-NLP-PEFT](https://huggingface.co/mrs83/FlowerTune-Falcon3-Mamba-7B-Instruct-NLP-PEFT)
+[FlowerTune-phi4-NLP-PEFT](https://huggingface.co/mrs83/FlowerTune-phi4-NLP-PEFT)
 
 
 ## Methodology
@@ -27,15 +27,13 @@ For the **microsoft/phi-4** model I adopted the following fine-tuning methodolog
 - **Precision**: `bf16` for model weights.
 - **Quantization**: `4-bit` quantization for reduced memory usage.
 - **[DoRA](https://arxiv.org/abs/2402.09353) Configuration**:
-  - Rank (r): `16`
-  - Alpha: `128`
+  - Rank (r): `8`
+  - Alpha: `16`
   - Target Modules:
-    - `proj_up`
-    - `proj_down`
-    - `q_proj`
-    - `k_proj`
-    - `v_proj`
-    - `LinearHeadwiseExpand`
+    - `qkv_proj`
+    - `o_proj`
+    - `gate_up_proj`
+    - `down_proj`
 - **Training Configuration**:
   - Batch size: `8`
   - Maximum number of steps: `10`
@@ -44,7 +42,7 @@ For the **microsoft/phi-4** model I adopted the following fine-tuning methodolog
 - **Learning Rate Scheduler**:
   - Cosine Annealing over rounds, where:
     - Maximum LR: `5e-5`
-    - Minimum LR: `1e-6`
+    - Minimum LR: `5e-6`
   - Constant learning rate scheduler over steps
 - **Strategy**: `FedAvg`
 
@@ -56,16 +54,28 @@ Below is the training loss plot from the experiment:
 
 This methodology enabled efficient fine-tuning within constrained resources while ensuring competitive performance.
 
+## How to Get Started with the Model
+
+Use this model as:
+
+```
+from peft import PeftModel
+from transformers import AutoModelForCausalLM
+
+base_model = AutoModelForCausalLM.from_pretrained("microsoft/phi-4")
+model = PeftModel.from_pretrained(base_model, "mrs83/FlowerTune-phi-4-NLP-PEFT")
+```
+
 ### Evaluation Results (Accuracy)
 
-- **STEM**: xx.xx %
-- **Social Sciences**: xx.xx %
-- **Humanities**: xx.xx %
-- **Average**: xx.xx %
+- **STEM**: 40.66 %
+- **Social Sciences**: 74.52 %
+- **Humanities**: 51.75 %
+- **Average**: 55.64 %
 
 ### Communication Budget
 
-xxxxx.xx Megabytes
+45804.69 Megabytes
 
 
 ## Environments setup
@@ -79,7 +89,7 @@ pip install -e .
 ## Experimental setup
 
 The dataset is divided into 20 partitions in an IID fashion, a partition is assigned to each ClientApp.
-We randomly sample a fraction (0.25) of the total nodes to participate in each round, for a total of `100` rounds.
+We randomly sample a fraction (0.1) of the total nodes to participate in each round, for a total of `100` rounds.
 All settings are defined in `pyproject.toml`.
 
 > [!IMPORTANT]

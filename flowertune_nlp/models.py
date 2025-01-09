@@ -56,13 +56,23 @@ def get_model(model_cfg: DictConfig):
     model = prepare_model_for_kbit_training(
         model, use_gradient_checkpointing=model_cfg.gradient_checkpointing
     )
+    # Print available modules.
+    # modules = []
+    # for name, _ in model.named_modules():
+    #     modules.append(name)
+    # print(f"Available Modules: {','.join(modules)}")
 
     peft_config = LoraConfig(
         r=model_cfg.lora.peft_lora_r,
         lora_alpha=model_cfg.lora.peft_lora_alpha,
         lora_dropout=0.05,
         task_type="CAUSAL_LM",
-        target_modules=["q_proj", "k_proj", "v_proj", "dense"],
+        target_modules = [
+            "qkv_proj",
+            "o_proj",
+            "gate_up_proj",
+            "down_proj",
+        ],
         bias="none",
         use_dora=True,
     )
