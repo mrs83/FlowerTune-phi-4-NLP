@@ -54,18 +54,6 @@ Below is the training loss plot from the experiment:
 
 This methodology enabled efficient fine-tuning within constrained resources while ensuring competitive performance.
 
-## How to Get Started with the Model
-
-Use this model as:
-
-```
-from peft import PeftModel
-from transformers import AutoModelForCausalLM
-
-base_model = AutoModelForCausalLM.from_pretrained("microsoft/phi-4")
-model = PeftModel.from_pretrained(base_model, "mrs83/FlowerTune-phi-4-NLP-PEFT")
-```
-
 ### Evaluation Results (Accuracy)
 
 - **STEM**: 40.66 %
@@ -76,7 +64,6 @@ model = PeftModel.from_pretrained(base_model, "mrs83/FlowerTune-phi-4-NLP-PEFT")
 ### Communication Budget
 
 45804.69 Megabytes
-
 
 ## Environments setup
 
@@ -122,3 +109,16 @@ The global PEFT model checkpoints are saved every 5 rounds after aggregation on 
 
 > [!NOTE]
 > Please provide the last PEFT checkpoint if you plan to participated in the [LLM leaderboard](https://flower.ai/benchmarks/llm-leaderboard).
+
+
+## How to Get Started with the Model
+
+Use this model as:
+
+```
+from peft import PeftModel
+from transformers import AutoModelForCausalLM
+
+base_model = AutoModelForCausalLM.from_pretrained("microsoft/phi-4")
+model = PeftModel.from_pretrained(base_model, "mrs83/FlowerTune-phi-4-NLP-PEFT")
+```
