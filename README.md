@@ -10,7 +10,7 @@ which allows users to perform the training on a single GPU.
 
 The fine-tuning results have been submitted as a PEFT adapter and can be accessed here:
 
-[FlowerTune-phi4-NLP-PEFT](https://huggingface.co/mrs83/FlowerTune-phi4-NLP-PEFT)
+[FlowerTune-phi4-NLP-PEFT](https://huggingface.co/mrs83/FlowerTune-phi-4-NLP-PEFT)
 
 
 ## Methodology
