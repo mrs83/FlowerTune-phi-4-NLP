@@ -92,17 +92,6 @@ The configs are defined in `[tool.flwr.app.config]` entry of `pyproject.toml`, a
 flwr run
 ```
 
-## VRAM consumption
-
-Given a Mistral-7B model with 4-bit quantization, the estimated VRAM consumption per client for each challenge is:
-
-| Challenges | GeneralNLP |   Finance  |   Medical  |    Code    |
-| :--------: | :--------: | :--------: | :--------: | :--------: |
-|    VRAM    | ~25.50 GB  | ~17.30 GB  | ~22.80 GB  | ~17.40 GB  |
-
-You can adjust the CPU/GPU resources you assign to each of the clients based on your device, which are specified with `options.backend.client-resources.num-cpus` and `options.backend.client-resources.num-gpus` under `[tool.flwr.federations.local-simulation]` entry in `pyproject.toml`.
-
-
 ## Model saving
 
 The global PEFT model checkpoints are saved every 5 rounds after aggregation on the sever side as default, which can be specified with `train.save-every-round` under [tool.flwr.app.config] entry in `pyproject.toml`.
